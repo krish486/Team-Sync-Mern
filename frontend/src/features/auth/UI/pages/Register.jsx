@@ -1,29 +1,11 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+
 import { FiUser, FiMail, FiLock } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
+import { authHook } from "../../hook/authHook";
 
 const Register = () => {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors, isSubmitting },
-    } = useForm();
-
-    const password = watch("password", "");
-
-    const getStrength = () => {
-        if (password.length < 4) return 25;
-        if (password.length < 8) return 50;
-        if (!/[A-Z]/.test(password)) return 75;
-        return 100;
-    };
-
-    const onSubmit = (data) => {
-        console.log(data);
-    };
-
+    let { register, handleSubmit, errors, isSubmitting, password, getStrength, onLoginSubmit, onRegisterSubmit } = authHook()
     return (
         <div className="min-h-screen bg-[#070511] text-white">
 
@@ -104,7 +86,7 @@ const Register = () => {
                         </p>
 
                         <form
-                            onSubmit={handleSubmit(onSubmit)}
+                            onSubmit={handleSubmit(onRegisterSubmit)}
                             className="space-y-6"
                         >
 

@@ -1,19 +1,13 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
+import { authHook } from "../../hook/authHook";
 
 const Login = () => {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors, isSubmitting },
-    } = useForm();
 
-    const onSubmit = async (data) => {
-        console.log(data);
-    };
+    let { register, handleSubmit, errors, isSubmitting, onLoginSubmit } = authHook();
 
     return (
         <div className="min-h-screen bg-[#090914] relative overflow-hidden flex items-center justify-center px-4">
@@ -74,7 +68,7 @@ const Login = () => {
 
                     {/* Form */}
                     <form
-                        onSubmit={handleSubmit(onSubmit)}
+                        onSubmit={handleSubmit(onLoginSubmit)}
                         className="space-y-5"
                     >
 
