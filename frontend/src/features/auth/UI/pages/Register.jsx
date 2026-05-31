@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { authHook } from "../../hook/authHook";
 
 const Register = () => {
-    let { register, handleSubmit, errors, isSubmitting, password, getStrength, onLoginSubmit, onRegisterSubmit } = authHook()
+    let { register, handleSubmit, errors, isSubmitting, password, getStrength, onLoginSubmit, onRegisterSubmit, navigate } = authHook()
     return (
         <div className="min-h-screen bg-[#070511] text-white">
 
@@ -243,7 +243,9 @@ const Register = () => {
 
                         </div>
 
-                        <p className="text-center text-gray-400 mt-10">
+                        <p
+                            onClick={() => { navigate("/") }}
+                            className="text-center text-gray-400 mt-10">
                             Already have an account?{" "}
                             <span className="text-purple-400 font-semibold cursor-pointer">
                                 Log In

@@ -1,13 +1,13 @@
 import React from "react";
-
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { authHook } from "../../hook/authHook";
 
+
 const Login = () => {
 
-    let { register, handleSubmit, errors, isSubmitting, onLoginSubmit } = authHook();
+    let { register, handleSubmit, errors, isSubmitting, onLoginSubmit, navigate } = authHook();
 
     return (
         <div className="min-h-screen bg-[#090914] relative overflow-hidden flex items-center justify-center px-4">
@@ -170,7 +170,9 @@ const Login = () => {
                     {/* Footer */}
                     <div className="mt-8 text-center border-t border-white/10 pt-6">
 
-                        <p className="text-gray-400 text-sm">
+                        <p
+                            onClick={() => { navigate("/register") }}
+                            className="text-gray-400 text-sm">
                             Don't have an account?{" "}
                             <span className="text-purple-400 cursor-pointer hover:text-purple-300 font-medium">
                                 Sign Up

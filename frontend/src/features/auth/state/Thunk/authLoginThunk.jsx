@@ -7,7 +7,7 @@ export let loginThunk = createAsyncThunk("auth/login", async (credentials, thunk
 
         let res = await axiosInstance.post("auth/login", credentials)
 
-        return res.data
+        return res.data.data
 
     } catch (error) {
         return thunkError.rejectWithValue("error in login Thunk-->", error)

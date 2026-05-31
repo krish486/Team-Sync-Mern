@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router"
+import { useDispatch } from "react-redux"
+import { loginThunk } from "../state/Thunk/authLoginThunk";
 
 export let authHook = () => {
+    let dispatch = useDispatch();
+    let navigate = useNavigate()
     const {
         register,
         handleSubmit,
@@ -18,11 +23,11 @@ export let authHook = () => {
     };
 
     const onLoginSubmit = (data) => {
-        console.log(data);
+        dispatch(loginThunk(data))
     };
     const onRegisterSubmit = (data) => {
         console.log(data);
     };
 
-    return { register, handleSubmit, errors, isSubmitting, password, getStrength, onLoginSubmit, onRegisterSubmit }
+    return { register, handleSubmit, errors, isSubmitting, password, getStrength, onLoginSubmit, onRegisterSubmit, navigate }
 }
