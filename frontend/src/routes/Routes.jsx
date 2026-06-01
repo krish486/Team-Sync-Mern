@@ -5,33 +5,45 @@ import Login from '../features/auth/UI/pages/Login'
 import Register from '../features/auth/UI/pages/Register'
 import MainLayout from '../Layout/MainLayout'
 import Home from '../features/dashboard/UI/Pages/Home'
+import PublicRoutes from '../protectedRoutes/PublicRoutes'
+import ProtectedRoutes from '../protectedRoutes/ProtectedRoutes'
 
 const Routes = () => {
-
-
 
     let router = createBrowserRouter([
         {
             path: "/",
-            element: <AuthLayout />,
+            element: <PublicRoutes />,
             children: [
                 {
                     path: "",
-                    element: <Login />
-                },
-                {
-                    path: "register",
-                    element: <Register />
+                    element: <AuthLayout />,
+                    children: [
+                        {
+                            path: "",
+                            element: <Login />
+                        },
+                        {
+                            path: "register",
+                            element: <Register />
+                        }
+                    ]
                 }
             ]
         },
         {
             path: "/home",
-            element: <MainLayout />,
+            element: <ProtectedRoutes />,
             children: [
                 {
                     path: "",
-                    element: <Home />
+                    element: <MainLayout />,
+                    children: [
+                        {
+                            path: "",
+                            element: <Home />
+                        }
+                    ]
                 }
             ]
         }
