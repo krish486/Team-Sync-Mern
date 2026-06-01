@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import AuthLayout from '../Layout/AuthLayout'
 import Login from '../features/auth/UI/pages/Login'
@@ -7,6 +7,8 @@ import MainLayout from '../Layout/MainLayout'
 import Home from '../features/dashboard/UI/Pages/Home'
 
 const Routes = () => {
+
+
 
     let router = createBrowserRouter([
         {

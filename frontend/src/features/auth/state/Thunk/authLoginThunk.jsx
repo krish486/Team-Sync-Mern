@@ -13,3 +13,16 @@ export let loginThunk = createAsyncThunk("auth/login", async (credentials, thunk
         return thunkError.rejectWithValue("error in login Thunk-->", error)
     }
 })
+
+
+export let getMeThunk = createAsyncThunk("auth/me", async (_, thunkAPI) => {
+    try {
+
+        let res = await axiosInstance.get("auth/me")
+
+        return res.data.user
+
+    } catch (error) {
+        return thunkAPI.rejectWithValue("error in get me thunk", error)
+    }
+})

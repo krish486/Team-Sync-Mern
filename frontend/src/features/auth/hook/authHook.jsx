@@ -10,6 +10,7 @@ export let authHook = () => {
         register,
         handleSubmit,
         watch,
+        reset,
         formState: { errors, isSubmitting },
     } = useForm();
 
@@ -24,6 +25,8 @@ export let authHook = () => {
 
     const onLoginSubmit = (data) => {
         dispatch(loginThunk(data))
+        console.log("logged in")
+        reset()
     };
     const onRegisterSubmit = (data) => {
         console.log(data);
