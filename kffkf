@@ -1,0 +1,35 @@
+[1mdiff --git a/frontend/src/features/auth/UI/pages/Login.jsx b/frontend/src/features/auth/UI/pages/Login.jsx[m
+[1mindex b283906..3016f94 100644[m
+[1m--- a/frontend/src/features/auth/UI/pages/Login.jsx[m
+[1m+++ b/frontend/src/features/auth/UI/pages/Login.jsx[m
+[36m@@ -29,7 +29,7 @@[m [mconst Login = () => {[m
+                         </div>[m
+ [m
+                         <h1 className="text-white text-3xl font-bold mt-4">[m
+[31m-                            Synthetix AI[m
+[32m+[m[32m                            team-sync[m
+                         </h1>[m
+ [m
+                         <p className="text-gray-400 mt-2 text-sm">[m
+[36m@@ -185,7 +185,7 @@[m [mconst Login = () => {[m
+                 {/* Footer Text */}[m
+                 <div className="text-center mt-6">[m
+                     <p className="text-gray-500 text-xs">[m
+[31m-                        © 2026 Synthetix AI. All rights reserved.[m
+[32m+[m[32m                        © 2026 team-sync. All rights reserved.[m
+                     </p>[m
+                 </div>[m
+ [m
+[1mdiff --git a/frontend/src/features/auth/UI/pages/Register.jsx b/frontend/src/features/auth/UI/pages/Register.jsx[m
+[1mindex b34021f..f7e2475 100644[m
+[1m--- a/frontend/src/features/auth/UI/pages/Register.jsx[m
+[1m+++ b/frontend/src/features/auth/UI/pages/Register.jsx[m
+[36m@@ -25,7 +25,7 @@[m [mconst Register = () => {[m
+                     <div className="relative z-10 flex flex-col justify-between p-10 xl:p-14 w-full">[m
+ [m
+                         <h1 className="text-3xl font-bold">[m
+[31m-                            Synthetix AI[m
+[32m+[m[32m                            team-sync[m
+                         </h1>[m
+ [m
+                         <div>[m

@@ -29,7 +29,7 @@ const Login = () => {
                         </div>
 
                         <h1 className="text-white text-3xl font-bold mt-4">
-                            Synthetix AI
+                            team-sync
                         </h1>
 
                         <p className="text-gray-400 mt-2 text-sm">
@@ -185,7 +185,7 @@ const Login = () => {
                 {/* Footer Text */}
                 <div className="text-center mt-6">
                     <p className="text-gray-500 text-xs">
-                        © 2026 Synthetix AI. All rights reserved.
+                        © 2026 team-sync. All rights reserved.
                     </p>
                 </div>
 

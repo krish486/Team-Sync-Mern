@@ -25,7 +25,7 @@ const Register = () => {
                     <div className="relative z-10 flex flex-col justify-between p-10 xl:p-14 w-full">
 
                         <h1 className="text-3xl font-bold">
-                            Synthetix AI
+                            team-sync
                         </h1>
 
                         <div>
